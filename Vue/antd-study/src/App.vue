@@ -1,77 +1,64 @@
 <template>
-  <a-layout :style="{height: '100%'}">
-    <a-layout-sider breakpoint="lg" collapsed-width="0" @collapse="onCollapse" @breakpoint="onBreakpoint">
+  <a-layout style="min-height: 100vh">
+    <a-layout-sider v-model:collapsed="collapsed" collapsible>
       <div class="logo" />
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item key="1">
-          <user-outlined />
-          <span class="nav-text">nav 1</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <video-camera-outlined />
-          <span class="nav-text">nav 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
-          <upload-outlined />
-          <span class="nav-text">nav 3</span>
-        </a-menu-item>
-        <a-menu-item key="4">
-          <user-outlined />
-          <span class="nav-text">nav 4</span>
-        </a-menu-item>
+        <a-sub-menu key="sub1">
+          <template #title>
+            <span>
+              <pie-chart-outlined />
+              <span>Table</span>
+            </span>
+          </template>
+          <a-menu-item key="3">Table</a-menu-item>
+          <a-menu-item key="4">Column</a-menu-item>
+        </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header :style="{ background: '#fff', padding: 0 }" />
-      <a-layout-content :style="{ margin: '24px 16px 0' }">
-        <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">content</div>
+      <a-layout-content style="margin: 0 16px">
+        <a-breadcrumb style="margin: 16px 0">
+          <a-breadcrumb-item>Table</a-breadcrumb-item>
+          <a-breadcrumb-item>Column</a-breadcrumb-item>
+        </a-breadcrumb>
+        <div
+          :style="{ padding: '24px', background: '#fff', minHeight: '360px' }"
+        >
+          Bill is a cat.
+        </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
-        Ant Design ©2018 Created by Ant UED
+        Ant Design Study Created by LireEruel
       </a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
 <script>
-import { UserOutlined, VideoCameraOutlined, UploadOutlined } from '@ant-design/icons-vue';
-import { defineComponent, ref } from 'vue';
+import { PieChartOutlined } from "@ant-design/icons-vue";
+import { defineComponent, ref } from "vue";
 export default defineComponent({
   components: {
-    UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
+    PieChartOutlined,
   },
-  setup() {
-    const onCollapse = (collapsed, type) => {
-      console.log(collapsed, type);
-    };
-    const onBreakpoint = broken => {
-      console.log(broken);
-    };
+  data() {
     return {
-      selectedKeys: ref(['4']),
-      onCollapse,
-      onBreakpoint,
+      collapsed: ref(false),
+      selectedKeys: ref(["1"]),
     };
   },
 });
 </script>
 <style>
-#components-layout-demo-responsive .logo {
+#components-layout-demo-side .logo {
   height: 32px;
-  background: rgba(255, 255, 255, 0.2);
   margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.site-layout-sub-header-background {
+.site-layout .site-layout-background {
   background: #fff;
 }
-
-.site-layout-background {
-  background: #fff;
-}
-
-[data-theme='dark'] .site-layout-sub-header-background {
+[data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
 }
 </style>
