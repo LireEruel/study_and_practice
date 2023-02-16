@@ -1,15 +1,26 @@
+<script setup lang="ts">
+import CurrentPageDataTable from '../components/tables/CurrentPageDataTable.vue';
+</script>
+
 <template>
-  <div class="c">
-    <h1>This is an table page</h1>
+  <div class="container">
+    <a-typography>
+      <a-typography-title>AntD Table</a-typography-title>
+      <a-typography-title :level="3"> When To Use </a-typography-title>
+      <ul>
+        <li>To display a collection of structured data.</li>
+        <li>To sort, search, paginate, filter data.</li>
+      </ul>
+    </a-typography>
+    <CurrentPageDataTable />
   </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .container {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 2%;
   }
 }
 </style>
