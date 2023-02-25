@@ -9,28 +9,31 @@ main {
 
 #calculator {
   margin: auto;
-  border: 1px solid black;
   width: 20%;
-  height: 50%;
+  height: 70%;
   padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
 }
 
 #input {
-  width: 95%;
+  width: 98%;
   padding: 5%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
+  height: 15%;
   justify-content: center;
 }
 .btn-wrap {
-  height: 80%;
+  height: 70%;
+  display: grid;
 }
 
 .btn-row {
-  display: flex;
-  justify-content: space-between;
-  height: 19%;
-  margin: 2%;
+  display: table-row-group;
+  height: 80%;
 }
 .btn {
   width: 20%;
