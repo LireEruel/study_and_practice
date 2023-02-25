@@ -27,13 +27,14 @@ main {
   display: flex;
   height: 15%;
   justify-content: center;
-  font-size: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0b254e;
   text-align: center;
   overflow: scroll;
   outline: none;
   border: none;
-  font-weight: bold;
-  color: #0b254e;
+
   background: #e8eaec;
   border-radius: 10px;
   padding: 12px;
@@ -60,6 +61,9 @@ main {
   background: #fbfdfe;
   box-shadow: 6px 6px 12px #dddfe0, -6px -6px 12px #ffffff;
   transition: all 1s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0b254e;
 }
 
 .btn:hover {
