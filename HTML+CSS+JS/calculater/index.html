@@ -12,12 +12,12 @@
   <body>
     <main>
       <div id="calculator">
-        <input type="text" id="input" />
+        <input type="text" id="input" readonly />
         <div class="btn-wrap">
           <div class="btn-row">
             <input class="btn" type="button" value="C" onclick="Clear()" />
             <input class="btn" type="button" value="%" onclick="Solve('%')" />
-            <input class="btn" type="button" value="←" onclick="Back('←')" />
+            <input class="btn" type="button" value="←" onclick="Back()" />
             <input class="btn" type="button" value="/" onclick="Solve('/')" />
           </div>
           <div class="btn-row">
@@ -47,5 +47,6 @@
         </div>
       </div>
     </main>
+    <script type="text/javascript" src="calculater.js"></script>
   </body>
 </html>
