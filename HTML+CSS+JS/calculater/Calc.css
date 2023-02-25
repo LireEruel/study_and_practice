@@ -71,3 +71,8 @@ main {
   background: linear-gradient(145deg, #e2e4e5, #ffffff);
   box-shadow: 6px 6px 12px #dddfe0, -6px -6px 12px #ffffff;
 }
+.btn:active {
+  border-radius: 9px;
+  background: #fbfdfe;
+  box-shadow: inset 6px 6px 12px #dddfe0, inset -6px -6px 12px #ffffff;
+}
