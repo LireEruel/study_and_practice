@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+}
+main {
+  display: flex;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+
+#calculator {
+  margin: auto;
+  border: 1px solid black;
+  width: 20%;
+  height: 50%;
+  padding: 1%;
+}
+
+#input {
+  width: 95%;
+  padding: 5%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.btn-wrap {
+  height: 80%;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  height: 19%;
+  margin: 2%;
+}
+.btn {
+  width: 20%;
+  height: 100%;
+  margin: 1%;
+}
