@@ -6,8 +6,18 @@ class Main {
     this.render();
   }
 
+  setMode(mode) {
+    this.mode = mode;
+  }
+
   render() {
+    console.log(this.mode);
+    if (this.$body.children[3] !== undefined) {
+      this.$body.removeChild(this.$body.children[3]);
+    }
+    this.$body.style.backgroundColor = this.backgroundColor;
     const main = document.createElement("main");
+    this.main = main;
     const container = document.createElement("div");
     const h2 = document.createElement("h2");
     const colorSpan = document.createElement("span");
