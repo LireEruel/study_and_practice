@@ -1,13 +1,18 @@
 class Main {
-  constructor($body, mode) {
+  constructor($body, mode, setNewBackgroundColor) {
     this.$body = $body;
     this.mode = mode;
     this.backgroundColor = "#F1f5f8";
+    this.setNewBackgroundColor = setNewBackgroundColor;
     this.render();
   }
 
   setMode(mode) {
     this.mode = mode;
+  }
+
+  setBackgroundColor(color) {
+    this.backgroundColor = color;
   }
 
   render() {
@@ -37,7 +42,7 @@ class Main {
     colorSpan.setAttribute("class", "color");
 
     button.addEventListener("click", () => {
-      console.log(this.mode, this.backgroundColor);
+      this.setNewBackgroundColor();
     });
 
     this.$body.appendChild(main);
