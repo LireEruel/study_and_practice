@@ -1,6 +1,7 @@
 class Header {
-  constructor($body) {
+  constructor($body, setMode) {
     this.$body = $body;
+    this.setMode = setMode;
     this.render();
   }
 
@@ -20,18 +21,21 @@ class Header {
     h4.textContent = "Color Flipper";
     h4.setAttribute("class", "title");
 
-    this.addListItem(ul, "Simple");
-    this.addListItem(ul, "Hex");
+    this.addListItem(ul, "Simple", true);
+    this.addListItem(ul, "Hex", false);
 
     this.$body.appendChild(nav);
   }
 
-  addListItem(ul, text) {
-    console.log;
+  addListItem(ul, text, mode) {
     const li = document.createElement("li");
     const anchor = document.createElement("a");
     ul.appendChild(li);
     li.appendChild(anchor);
+    li.addEventListener("click", () => {
+      console.log(mode);
+      this.setMode(mode);
+    });
     anchor.textContent = text;
   }
 }
