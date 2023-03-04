@@ -33,7 +33,6 @@ class Header {
     ul.appendChild(li);
     li.appendChild(anchor);
     li.addEventListener("click", () => {
-      console.log(mode);
       this.setMode(mode);
     });
     anchor.textContent = text;

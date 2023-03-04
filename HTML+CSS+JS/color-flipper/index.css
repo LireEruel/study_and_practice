@@ -42,6 +42,7 @@
   display: grid;
   align-items: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
 }
 
 .nav-center {
@@ -74,7 +75,7 @@
 }
 
 main {
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4rem);
   display: grid;
   place-items: center;
 }
