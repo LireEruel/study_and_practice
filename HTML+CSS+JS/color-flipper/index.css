@@ -1,0 +1,40 @@
+:root {
+  --primary-color: hsl(205, 78%, 60%);
+}
+
+.nav {
+  background-color: white;
+  height: 4rem;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--primary-color);
+}
+
+.nav-center ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-center a {
+  margin-right: 20px;
+  transition: color 0.2s;
+}
+
+.nav-center a:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
