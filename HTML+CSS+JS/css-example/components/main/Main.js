@@ -7,17 +7,27 @@ class Main {
 
   render() {
     const $main = document.createElement("main");
-    const $container = document.createElement("div");
+
     const $btnGroup = document.createElement("div");
-    const $appendBoxButton = document.createElement("button");
+    const $addBoxButton = document.createElement("button");
+    const $containerLabel = document.createElement("h4");
+    const $containerWrap = document.createElement("div");
+    const $container = document.createElement("div");
 
     this.$body.appendChild($main);
     $main.appendChild($btnGroup);
-    $btnGroup.appendChild($appendBoxButton);
-    $main.appendChild($container);
+    $btnGroup.appendChild($addBoxButton);
+    $main.appendChild($containerWrap);
+    $containerWrap.appendChild($containerLabel);
+    $containerWrap.appendChild($container);
 
-    $appendBoxButton.textContent = "append New Box";
-    $appendBoxButton.addEventListener("click", () => this.addBox($container));
+    $containerWrap.className = "container-wrap";
+    $containerLabel.textContent = "container";
+
+    $addBoxButton.textContent = "add Box";
+    $addBoxButton.addEventListener("click", () => this.addBox($container));
+    $addBoxButton.className = "add-box-btn";
+
     $container.className = "container";
   }
 
