@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  margin: 0px;
 }
 main {
   display: flex;
@@ -21,8 +22,7 @@ main {
 }
 
 #input {
-  width: 100%;
-  padding: 5%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   height: 15%;
@@ -34,6 +34,7 @@ main {
   overflow: scroll;
   outline: none;
   border: none;
+  box-sizing: border-box;
 
   background: #e8eaec;
   border-radius: 10px;
