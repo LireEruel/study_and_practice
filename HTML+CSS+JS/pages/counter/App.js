@@ -14,7 +14,7 @@ class App {
     const buttonContainer = document.createElement("div");
     const decreaseBtn = document.createElement("button");
     const resetBtn = document.createElement("button");
-    const increaseBtn = document.createElement("increase");
+    const increaseBtn = document.createElement("button");
 
     // body에 element 연결
 
@@ -40,6 +40,18 @@ class App {
     resetBtn.textContent = "RESET";
     increaseBtn.classList = "btn increase";
     increaseBtn.textContent = "INCREASE";
+    increaseBtn.addEventListener("click", () => {
+      this.count++;
+      count.textContent = this.count;
+    });
+    decreaseBtn.addEventListener("click", () => {
+      this.count--;
+      count.textContent = this.count;
+    });
+    resetBtn.addEventListener("click", () => {
+      this.count = 0;
+      count.textContent = this.count;
+    });
   }
 }
 
