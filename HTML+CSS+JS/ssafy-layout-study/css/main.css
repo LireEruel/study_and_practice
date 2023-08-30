@@ -59,7 +59,6 @@ main {
 }
 
 .vote-container {
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,12 +147,6 @@ form h3 {
 form > p {
   text-align: end;
 }
-. @media (min-width: 800px) {
-  /* desktop*/
-  header > ul {
-    justify-content: flex-end;
-  }
-}
 
 .article-section {
   width: 80%;
@@ -201,8 +194,32 @@ footer a:hover {
 }
 
 @media (max-width: 800px) {
-  header > ul {
+  header {
+    height: auto;
+  }
+  nav > ul {
     flex-direction: column;
     align-items: center;
+  }
+  nav > ul > li {
+    margin: 1rem;
+  }
+  main {
+    flex-direction: column;
+  }
+  .article-section {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  /* desktop*/
+  header > ul {
+    justify-content: flex-end;
+  }
+  .vote-container {
+    width: 30%;
   }
 }
