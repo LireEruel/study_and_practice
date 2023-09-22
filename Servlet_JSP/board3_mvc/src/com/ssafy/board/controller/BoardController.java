@@ -87,6 +87,7 @@ public class BoardController extends HttpServlet {
 	}
 
 	private String view(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println(request.getParameter("articleno"));
 		int articleNo = Integer.parseInt(request.getParameter("articleno"));
 		try {
 			BoardDto boardDto = boardService.getArticle(articleNo);
@@ -117,21 +118,47 @@ public class BoardController extends HttpServlet {
 	private String mvModify(HttpServletRequest request, HttpServletResponse response) {
 		// TODO : 수정하고자하는 글의 글번호를 얻는다.
 		// TODO : 글번호에 해당하는 글정보를 얻고 글정보를 가지고 modify.jsp로 이동.
-		return null;
+		System.out.println(request.getParameter("articleno"));
+		int articleNo = Integer.parseInt(request.getParameter("articleno"));
+		try {
+			BoardDto boardDto = boardService.getArticle(articleNo);
+			request.setAttribute("boardDto", boardDto);
+		} catch(Exception e) {
+			e.printStackTrace();
+			return "/board/modify.jsp";
+		}
+		return "/index.jsp";
 	}
 
 	private String modify(HttpServletRequest request, HttpServletResponse response) {
 		// TODO : 수정 할 글정보를 얻고 BoardDto에 set.
 		// TODO : boardDto를 파라미터로 service의 modifyArticle() 호출.
 		// TODO : 글수정 완료 후 view.jsp로 이동.(이후의 프로세스를 생각해 보세요.)
-		return null;
+		BoardDto boardDto = new BoardDto();
+		boardDto.setArticleNo(Integer.parseInt(request.getParameter("articleno")));
+		boardDto.setSubject(request.getParameter("subject"));
+		boardDto.setContent(request.getParameter("content"));
+		try {
+			boardService.modifyArticle(boardDto);
+			return "/article?action=view";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "/index.jsp";
+		}
+		
 	}
 
 	private String delete(HttpServletRequest request, HttpServletResponse response) {
-		// TODO : 삭제할 글 번호를 얻는다.
-		// TODO : 글번호를 파라미터로 service의 deleteArticle()을 호출.
-		// TODO : 글삭제 완료 후 list.jsp로 이동.(이후의 프로세스를 생각해 보세요.)
-		return null;
+		// 삭제할 글 번호를 얻는다.
+		int articleNo = Integer.parseInt(request.getParameter("articleNo"));
+		// 글번호를 파라미터로 service의 deleteArticle()을 호출.
+		try {
+			boardService.deleteArticle(articleNo);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			return "/article?action=list";
+		}
 	}
 
 }

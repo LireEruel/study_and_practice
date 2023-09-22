@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;DAEJEON02_JAVA&apos; to &apos;A0010_1043737&apos;&#x0D;&#x0A;- Original project: &apos;A0010_1043737&apos;&#x0D;&#x0A;- Original element: &apos;DAEJEON02_JAVA&apos;&#x0D;&#x0A;- Renamed element: &apos;A0010_1043737&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DAEJEON02_JAVA&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{DAEJEON02_JAVA.java[DAEJEON02_JAVA" matchStrategy="1" name="A0010_1043737" qualified="false" references="true" similarDeclarations="false" stamp="1694392691832" textual="false" version="1.0"/>
+</session>

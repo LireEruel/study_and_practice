@@ -1,0 +1,18 @@
+INDEX VERSION 1.4+C:\1tassafy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1878675655.index
+3277395667.index
+2903428334.index
+3308393723.index
+2133293222.index
+1722175561.index
+508171128.index
+2790383038.index
+3826723701.index
+786177491.index
+3271193799.index
+817498803.index
+2106701822.index
+587604767.index
+3053816674.index
+2546933422.index
+3806374321.index

@@ -131,7 +131,17 @@ public class BoardDaoImpl implements BoardDao {
 	@Override
 	public void deleteArticle(int articleNO) throws SQLException {
 		// TODO : 글번호에 해당하는 글삭제
-		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = DBUtil.getConnection();
+			StringBuilder sql = new StringBuilder("delete from board where article_no = ?");
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setInt(1, articleNO);
+			pstmt.execute();
+		} finally {
+			DBUtil.close(pstmt, conn);
+		}
 	}
 
 }
