@@ -14,12 +14,13 @@ import com.ssafy.ws.model.dto.Book;
 import com.ssafy.ws.model.service.BookService;
 import com.ssafy.ws.model.service.BookServiceImpl;
 import com.ssafy.ws.model.service.UserService;
+import com.ssafy.ws.model.service.UserServiceImpl;
 
 public class BookMain {
 	public static void main(String[] args) throws Exception {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/applicationConfig.xml");
 		BookService bs = context.getBean(BookServiceImpl.class);
-		// UserService us = context.getBean(UserServiceImpl.class);
+		UserService us = context.getBean(UserServiceImpl.class);
 
 		List<Book> books = bs.search();
 		Book book = bs.select(books.get(0).getIsbn());
@@ -29,7 +30,7 @@ public class BookMain {
 		System.out.println("insert : " + bs.insert(book2));
 		System.out.println("delete : " + bs.delete("12"));
 
-		// System.out.println(us.select("ssafy"));
+		System.out.println(us.select("ssafy"));
 
 	}
 }
