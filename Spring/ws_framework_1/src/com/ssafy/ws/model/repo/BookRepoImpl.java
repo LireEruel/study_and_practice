@@ -31,7 +31,6 @@ public class BookRepoImpl implements BookRepo {
 
 	@Override
 	public int insert(Book book) throws SQLException {
-		System.out.println("BookRepo insert method call!!!!!");
 		int cnt = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -62,14 +61,20 @@ public class BookRepoImpl implements BookRepo {
 			conn = dataSource.getConnection();
 			StringBuilder sql = new StringBuilder();
 			sql.append("update book \n");
-			sql.append("set title = ").append(book.getTitle());
-			sql.append(", set author = ").append(book.getAuthor());
-			sql.append(", set price = ").append(book.getPrice());
-			sql.append(", set content = ").append(book.getContent());
-			sql.append(",set img = ").append(book.getImg()).append("\n");
-			sql.append("where isbn = ").append(book.getIsbn());
+			sql.append("set title = ?, ");
+			sql.append("author = ?, ");
+			sql.append("price = ?, ");
+			sql.append("content = ?, ");
+			sql.append("img = ? \n");
+			sql.append("where isbn = ?");
 			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.executeQuery();
+			pstmt.setString(1, book.getTitle());
+			pstmt.setString(2, book.getAuthor());
+			pstmt.setInt(3, book.getPrice());
+			pstmt.setString(4, book.getContent());
+			pstmt.setString(5, book.getImg());
+			pstmt.setString(6, book.getIsbn());
+			pstmt.executeUpdate();
 		} finally {
 			dbUtil.close(pstmt, conn);
 		}
@@ -84,9 +89,10 @@ public class BookRepoImpl implements BookRepo {
 			conn = dataSource.getConnection();
 			StringBuilder sql = new StringBuilder();
 			sql.append("delete from book \n");
-			sql.append("where isbn = ").append(id);
+			sql.append("where isbn = ?");
 			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.executeQuery();
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
 		} finally {
 			dbUtil.close(pstmt, conn);
 		}
@@ -104,8 +110,9 @@ public class BookRepoImpl implements BookRepo {
 			StringBuilder sql = new StringBuilder();
 			sql.append(
 					"select * from book \n");
-			sql.append("where isbn = ").append(id);
+			sql.append("where isbn = ?");
 			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				Book book = new Book();
