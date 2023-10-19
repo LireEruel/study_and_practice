@@ -55,21 +55,72 @@ public class BookRepoImpl implements BookRepo {
 	}
 
 	@Override
-	public int update(Book book) {
-		// TODO Auto-generated method stub
+	public int update(Book book) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = dataSource.getConnection();
+			StringBuilder sql = new StringBuilder();
+			sql.append("update book \n");
+			sql.append("set title = ").append(book.getTitle());
+			sql.append(", set author = ").append(book.getAuthor());
+			sql.append(", set price = ").append(book.getPrice());
+			sql.append(", set content = ").append(book.getContent());
+			sql.append(",set img = ").append(book.getImg()).append("\n");
+			sql.append("where isbn = ").append(book.getIsbn());
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.executeQuery();
+		} finally {
+			dbUtil.close(pstmt, conn);
+		}
 		return 0;
 	}
 
 	@Override
-	public int delete(String id) {
-		// TODO Auto-generated method stub
+	public int delete(String id) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = dataSource.getConnection();
+			StringBuilder sql = new StringBuilder();
+			sql.append("delete from book \n");
+			sql.append("where isbn = ").append(id);
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.executeQuery();
+		} finally {
+			dbUtil.close(pstmt, conn);
+		}
 		return 0;
 	}
 
 	@Override
-	public Book select(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Book select(String id) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Book result = null;
+		try {
+			conn = dataSource.getConnection();
+			StringBuilder sql = new StringBuilder();
+			sql.append(
+					"select * from book \n");
+			sql.append("where isbn = ").append(id);
+			pstmt = conn.prepareStatement(sql.toString());
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				Book book = new Book();
+				book.setIsbn(rs.getString("isbn"));
+				book.setTitle(rs.getString("title"));
+				book.setAuthor(rs.getString("author"));
+				book.setPrice(Integer.parseInt(rs.getString("price")));
+				book.setContent(rs.getString("content"));
+				book.setImg(rs.getString("img"));
+				result = book;
+			}
+		} finally {
+			dbUtil.close(rs, pstmt, conn);
+		}
+		return result;
 	}
 
 	@Override
@@ -81,11 +132,11 @@ public class BookRepoImpl implements BookRepo {
 		ResultSet rs = null;
 		try {
 			conn = dataSource.getConnection();
-			StringBuilder listArticle = new StringBuilder();
-			listArticle.append(
-					"select isbn from book \n");
+			StringBuilder sql = new StringBuilder();
+			sql.append(
+					"select * from book \n");
+			pstmt = conn.prepareStatement(sql.toString());
 			rs = pstmt.executeQuery();
-			System.out.println(rs);
 			while (rs.next()) {
 				Book Book = new Book();
 				Book.setIsbn(rs.getString("isbn"));

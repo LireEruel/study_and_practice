@@ -13,18 +13,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.ssafy.ws.model.dto.Book;
 import com.ssafy.ws.model.service.BookService;
 
-
 public class BookMain {
 	public static void main(String[] args) throws Exception {
-BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		
-		// TODO : xml or annotation의 spring 설정을 읽어온다.
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/applicationConfig.xml");
 		BookService bookService = (BookService) context.getBean("bookServiceImpl");
-		List<Book> list = bookService.search();
-		for(Book book : list) {
-			System.out.println(book);
-		}
+
 		Book bookDto = new Book();
 		System.out.print("isbn : ");
 		bookDto.setIsbn(in.readLine());
@@ -43,24 +38,25 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		System.out.println("================================== 글목록 ================================== ");
+
+		System.out.println("================================== 책목록 ================================== ");
 		try {
 			Map<String, String> map = new HashMap<String, String>();
 			map.put("pgno", "1");
 			map.put("key", "");
 			map.put("word", "");
-//			List<BoardDto> list = boardController.listArticle(map);
-//			for(BoardDto article : list) {
-//				System.out.println(article);
-//			}
-			
-			list = bookService.search();
-			for(Book book : list) {
+			// List<BoardDto> list = boardController.listArticle(map);
+			// for(BoardDto article : list) {
+			// System.out.println(article);
+			// }
+
+			List<Book> list = bookService.search();
+			for (Book book : list) {
 				System.out.println(book);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 }

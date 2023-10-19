@@ -14,6 +14,11 @@ public class User {
 		this.rec_id = rec_id;
 	}
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", pass=" + pass + ", rec_id=" + rec_id + "]";
+	}
+
 	public User() {
 		super();
 	}
