@@ -15,13 +15,16 @@ import com.ssafy.ws.model.service.BookService;
 
 
 public class BookMain {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
 		// TODO : xml or annotation의 spring 설정을 읽어온다.
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/applicationConfig.xml");
 		BookService bookService = (BookService) context.getBean("bookServiceImpl");
-		
+		List<Book> list = bookService.search();
+		for(Book book : list) {
+			System.out.println(book);
+		}
 		Book bookDto = new Book();
 		System.out.print("isbn : ");
 		bookDto.setIsbn(in.readLine());
@@ -33,7 +36,7 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		bookDto.setPrice(Integer.parseInt(in.readLine()));
 		System.out.print("내용 : ");
 		bookDto.setContent(in.readLine());
-		bookDto.setContent("이미지주소");
+		bookDto.setImg("이미지주소");
 
 		try {
 			bookService.insert(bookDto);
@@ -52,7 +55,7 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //				System.out.println(article);
 //			}
 			
-			List<Book> list = bookService.search();
+			list = bookService.search();
 			for(Book book : list) {
 				System.out.println(book);
 			}

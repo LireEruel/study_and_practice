@@ -1,5 +1,8 @@
 package com.ssafy.util;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class DBUtil {
 
 //	private final String driverName = "com.mysql.cj.jdbc.Driver";
