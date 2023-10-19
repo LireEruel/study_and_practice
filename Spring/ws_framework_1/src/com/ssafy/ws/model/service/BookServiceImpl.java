@@ -2,6 +2,7 @@ package com.ssafy.ws.model.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.ws.model.dto.Book;
@@ -11,7 +12,7 @@ import com.ssafy.ws.model.repo.BookRepo;
 public class BookServiceImpl implements BookService {
 	
 	private BookRepo bookRepo;
-
+	@Autowired
 	public BookServiceImpl(BookRepo bookRepo) {
 		super();
 		this.bookRepo = bookRepo;

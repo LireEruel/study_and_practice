@@ -7,16 +7,20 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.ssafy.util.DBUtil;
 import com.ssafy.ws.model.dto.Book;
 
+@Repository
 public class BookRepoImpl implements BookRepo {
 	
 	private DataSource dataSource;
 	private DBUtil dbUtil;
 	
 	
-
+	@Autowired
 	public BookRepoImpl(DataSource dataSource, DBUtil dbUtil) {
 		super();
 		this.dataSource = dataSource;
