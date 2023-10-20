@@ -16,7 +16,7 @@
 		<h5 class="text-center mt-3">Spring MVC를 이용한 파라미터 전달(Multi)</h5>
 		<div class="row justify-content-center">
 			<div class="col-4">
-			<form name="paramform" method="post" action="${root}/multi">
+			<form name="paramform" method="post" action="${root}/param/multi">
 				<div class="form-group mt-2">
 					<label for="userid">아이디:</label> <input type="text"
 						class="form-control" placeholder="아이디 입력" name="userId">

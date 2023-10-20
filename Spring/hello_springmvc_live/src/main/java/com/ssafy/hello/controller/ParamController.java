@@ -30,19 +30,6 @@ public class ParamController {
 		return "multi";
 	}
 	
-//	@PostMapping("/multi")
-//	public String multi(MultiDto multiDto) {
-//		System.out.println(multiDto);
-//		return "result/view";
-//	}
-	
-//	@PostMapping("/multi")
-//	public String multi(MultiDto multiDto, Model model) {
-//		System.out.println(multiDto);
-//		model.addAttribute("info", multiDto);
-//		return "result/view";
-//	}
-	
 	@PostMapping("/multi")
 	public String multi(@ModelAttribute("info") MultiDto multiDto) {
 		System.out.println(multiDto);
