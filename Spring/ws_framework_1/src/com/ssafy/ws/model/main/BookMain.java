@@ -12,52 +12,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ssafy.ws.model.dto.Book;
 import com.ssafy.ws.model.service.BookService;
-
+import com.ssafy.ws.model.service.BookServiceImpl;
+import com.ssafy.ws.model.service.UserService;
+import com.ssafy.ws.model.service.UserServiceImpl;
 
 public class BookMain {
-	public static void main(String[] args) throws IOException {
-BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		
-		// TODO : xml or annotation의 spring 설정을 읽어온다.
+	public static void main(String[] args) throws Exception {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/applicationConfig.xml");
-		BookService bookService = (BookService) context.getBean("bookServiceImpl");
-		
-		Book bookDto = new Book();
-		System.out.print("isbn : ");
-		bookDto.setIsbn(in.readLine());
-		System.out.print("제목 : ");
-		bookDto.setTitle(in.readLine());
-		System.out.print("작가 : ");
-		bookDto.setAuthor(in.readLine());
-		System.out.print("가격 : ");
-		bookDto.setPrice(Integer.parseInt(in.readLine()));
-		System.out.print("내용 : ");
-		bookDto.setContent(in.readLine());
-		bookDto.setContent("이미지주소");
+		BookService bs = context.getBean(BookServiceImpl.class);
+		UserService us = context.getBean(UserServiceImpl.class);
 
-		try {
-			bookService.insert(bookDto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		System.out.println("================================== 글목록 ================================== ");
-		try {
-			Map<String, String> map = new HashMap<String, String>();
-			map.put("pgno", "1");
-			map.put("key", "");
-			map.put("word", "");
-//			List<BoardDto> list = boardController.listArticle(map);
-//			for(BoardDto article : list) {
-//				System.out.println(article);
-//			}
-			
-			List<Book> list = bookService.search();
-			for(Book book : list) {
-				System.out.println(book);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		List<Book> books = bs.search();
+		Book book = bs.select(books.get(0).getIsbn());
+		book.setContent("수정수정수정");
+		System.out.println("update : " + bs.update(book));
+		Book book2 = new Book("12", "1", "1", 11, "1", "1");
+		System.out.println("insert : " + bs.insert(book2));
+		System.out.println("delete : " + bs.delete("12"));
+
+		System.out.println(us.select("ssafy"));
+
 	}
 }

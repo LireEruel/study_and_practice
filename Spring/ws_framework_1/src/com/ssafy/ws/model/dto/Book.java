@@ -19,6 +19,12 @@ public class Book {
 	public Book() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + ", price=" + price + ", content="
+				+ content + ", img=" + img + "]";
+	}
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
