@@ -22,5 +22,13 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.ssafy.ws" />
-	
+
+	<beans:bean id="sessionInterceptor" class="com.ssafy.ws.interceptor.SessionInterceptor" />
+
+	<interceptor>
+		<interceptor>
+			<mapping path="/regist" />
+			<beans:ref bean="sessionInterceptor"/>
+		</interceptor>
+	</interceptor>	
 </beans:beans>
