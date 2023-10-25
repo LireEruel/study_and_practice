@@ -1,9 +1,12 @@
 package com.ssafy.member.model.service;
 
+import org.springframework.stereotype.Service;
+
 import com.ssafy.member.model.MemberDto;
 import com.ssafy.member.model.dao.MemberDao;
 import com.ssafy.member.model.dao.MemberDaoImpl;
 
+@Service
 public class MemberServiceImpl implements MemberService {
 	
 	private final MemberDao memberDao;

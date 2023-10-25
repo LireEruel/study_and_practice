@@ -32,7 +32,6 @@
         </div>
         <div class="col-lg-8 col-md-10 col-sm-12">
           <form id="form-login" method="POST" action="">
-            <input type="hidden" name="action" value="login" />
             <div class="form-check mb-3 float-end">
               <input
                 class="form-check-input"
@@ -85,7 +84,7 @@
     ></script>
     <script>
       document.querySelector("#btn-mv-join").addEventListener("click", function () {
-    	location.href = "${root}/user?action=mvjoin";
+    	location.href = "${root}/user/join";
       });
       
       document.querySelector("#btn-login").addEventListener("click", function () {
@@ -97,7 +96,7 @@
           return;
         } else {
           let form = document.querySelector("#form-login");
-          form.setAttribute("action", "${root}/user");
+          form.setAttribute("action", "${root}/user/login");
           form.submit();
         }
       });
@@ -114,8 +113,8 @@
           </h2>
         </div>
         <div class="col-lg-8 col-md-10 col-sm-12 text-center">
-          <a href="${root}/article?action=mvwrite">글쓰기</a><br />
-          <a href="${root}/article?action=list&pgno=1&key=&word=">글목록</a>
+          <a href="${root}/article/write">글쓰기</a><br />
+          <a href="${root}/article/list?pgno=1&key=&word=">글목록</a>
         </div>
       </div>
     </div>

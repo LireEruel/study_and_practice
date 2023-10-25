@@ -9,14 +9,13 @@
         </div>
         <div class="col-lg-8 col-md-10 col-sm-12">
           <form id="form-join" method="POST" action="">
-          	<input type="hidden" name="action" value="join">
             <div class="mb-3">
               <label for="username" class="form-label">이름 : </label>
               <input
                 type="text"
                 class="form-control"
                 id="username"
-                name="username"
+                name="userName"
                 placeholder="이름..."
               />
             </div>
@@ -26,7 +25,7 @@
                 type="text"
                 class="form-control"
                 id="userid"
-                name="userid"
+                name="userId"
                 placeholder="아이디..."
               />
             </div>
@@ -37,7 +36,7 @@
                 type="text"
                 class="form-control"
                 id="userpwd"
-                name="userpwd"
+                name="userPwd"
                 placeholder="비밀번호..."
               />
             </div>
@@ -52,14 +51,14 @@
                   type="text"
                   class="form-control"
                   id="emailid"
-                  name="emailid"
+                  name="emailId"
                   placeholder="이메일아이디"
                 />
                 <span class="input-group-text">@</span>
                 <select
                   class="form-select"
                   id="emaildomain"
-                  name="emaildomain"
+                  name="emailDomain"
                   aria-label="이메일 도메인 선택"
                 >
                   <option selected>선택</option>
@@ -144,7 +143,7 @@
           return;
         } else {
           let form = document.querySelector("#form-join");
-          form.setAttribute("action", "${root}/user");
+          form.setAttribute("action", "${root}/user/join");
           form.submit();
         }
 	});

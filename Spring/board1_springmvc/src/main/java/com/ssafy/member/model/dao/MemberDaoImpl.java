@@ -7,9 +7,12 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.stereotype.Repository;
+
 import com.ssafy.member.model.MemberDto;
 import com.ssafy.util.DBUtil;
 
+@Repository
 public class MemberDaoImpl implements MemberDao {
 	
 	private final DataSource dataSource;

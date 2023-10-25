@@ -13,14 +13,13 @@
         </div>
         <div class="col-lg-8 col-md-10 col-sm-12">
           <form id="form-login" method="POST" action="">
-          	<input type="hidden" name="action" value="login">
             <div class="form-check mb-3 float-end">
               <input
                 class="form-check-input"
                 type="checkbox"
                 value="ok"
                 id="saveid"
-                name="saveid"
+                name="saveId"
                 ${idck}
               />
               <label class="form-check-label" for="saveid"> 아이디저장 </label>
@@ -64,7 +63,7 @@
     ></script>
     <script>
       document.querySelector("#btn-mv-join").addEventListener("click", function () {
-    	location.href = "${root}/user?action=mvjoin";
+    	location.href = "${root}/user/join";
       });
     
       document.querySelector("#btn-login").addEventListener("click", function () {
@@ -76,7 +75,7 @@
           return;
         } else {
           let form = document.querySelector("#form-login");
-          form.setAttribute("action", "${root}/user");
+          form.setAttribute("action", "${root}/user/login");
           form.submit();
         }
       });

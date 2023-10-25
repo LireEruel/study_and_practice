@@ -75,7 +75,6 @@
       </div>
     </div>
     <form id="form-param" method="get" action="">
-      <input type="hidden" id="p-action" name="action" value="">
       <input type="hidden" id="p-pgno" name="pgno" value="">
       <input type="hidden" id="p-key" name="key" value="">
       <input type="hidden" id="p-word" name="word" value="">
@@ -85,12 +84,17 @@
       titles.forEach(function (title) {
         title.addEventListener("click", function () {
           console.log(this.getAttribute("data-no"));
-          location.href = "${root}/article?action=view&articleno=" + this.getAttribute("data-no");
+          location.href = "${root}/article/view?articleno=" + this.getAttribute("data-no");
         });
       });
 
       document.querySelector("#btn-mv-register").addEventListener("click", function () {
-        location.href = "${root}/article?action=mvwrite";
+    	  document.querySelector("#p-pgno").value = "${data-pg}");
+       	  document.querySelector("#p-key").value = "${key}";
+       	  document.querySelector("#p-word").value = "${word}";
+	       	const form = document.querySelector("#form-param");
+	        form.setAttribute("action", "${root}/article/write");
+	        form.submit();
       });
       
       document.querySelector("#btn-search").addEventListener("click", function () {
@@ -103,11 +107,13 @@
       pages.forEach(function (page) {
         page.addEventListener("click", function () {
           console.log(this.parentNode.getAttribute("data-pg"));
-          document.querySelector("#p-action").value = "list";
        	  document.querySelector("#p-pgno").value = this.parentNode.getAttribute("data-pg");
        	  document.querySelector("#p-key").value = "${param.key}";
        	  document.querySelector("#p-word").value = "${param.word}";
-          document.querySelector("#form-param").submit();
+       	  
+          const form = document.querySelector("#form-param");
+          form.setAttribute("action", "${root}/article/list");
+          form.submit();
         });
       });
     </script>
