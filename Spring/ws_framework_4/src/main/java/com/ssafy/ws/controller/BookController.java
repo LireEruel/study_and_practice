@@ -18,15 +18,15 @@ import com.ssafy.ws.model.service.BookService;
 
 @Controller
 public class BookController {
-	
+
 	@Autowired
 	private BookService bookService;
-	
+
 	@GetMapping("/")
 	public String index() {
 		return "index";
 	}
-	
+
 	@GetMapping("/list")
 	public ModelAndView bookList() {
 		ModelAndView mav = new ModelAndView();
@@ -37,11 +37,12 @@ public class BookController {
 		mav.addObject("books", books);
 		return mav;
 	}
+
 	@GetMapping("/regist")
 	public String registPage() {
 		return "regist";
 	};
-	
+
 	@PostMapping("/regist")
 	public String regist(Book book, Model model) throws Exception {
 		bookService.insert(book);
@@ -78,5 +79,5 @@ public class BookController {
 		session.invalidate();
 		return "redirect:/";
 	}
-	
+
 }

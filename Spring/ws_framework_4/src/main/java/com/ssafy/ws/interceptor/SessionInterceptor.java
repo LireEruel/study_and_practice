@@ -12,18 +12,18 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import com.mysql.cj.Session;
 
 @Component
-public class SessionInterceptor implements HandlerInterceptor{
+public class SessionInterceptor implements HandlerInterceptor {
 
 	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-		
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws IOException {
+
 		HttpSession session = request.getSession();
-		if(session.getAttribute("user") != null) {
+		if (session.getAttribute("user") != null) {
 			return true;
-		}
-		else {
+		} else {
 			response.sendRedirect("/board/");
-			return false;	
+			return false;
 		}
 	}
 }

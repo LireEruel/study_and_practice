@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="31c66902-baa2-4315-9028-2a5aee5ad25f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../board1_springmvc/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../board1_springmvc/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board1_springmvc/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../board1_springmvc/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board1_springmvc/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../board1_springmvc/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board2_file_interceptor/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../board2_file_interceptor/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board2_file_interceptor/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../board2_file_interceptor/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board2_file_interceptor/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../board2_file_interceptor/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board2_file_interceptor/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../board2_file_interceptor/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.validation.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/.settings/org.eclipse.wst.validation.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/aop/LoggingAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/aop/LoggingAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/ExceptionControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/ExceptionControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/BoardDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/BoardDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/FileInfoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/FileInfoDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/dao/BoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/dao/BoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/dao/BoardDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/dao/BoardDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/service/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/model/service/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/view/FileDownLoadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/board/view/FileDownLoadView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/interceptor/ConfirmInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/interceptor/ConfirmInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/interceptor/ConfirmInterceptor2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/interceptor/ConfirmInterceptor2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/MemberDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/MemberDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/dao/MemberDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/dao/MemberDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/dao/MemberDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/dao/MemberDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/service/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/member/model/service/MemberServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/DBUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/PageNavigation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/PageNavigation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/ParameterCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/ParameterCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/SizeConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/util/SizeConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/ws/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/classes/com/ssafy/ws/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/ws/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board3_mybatis/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/ws/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_di/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_di/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_di/target/classes/META-INF/maven/hello_di/hello_di/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_di/target/classes/META-INF/maven/hello_di/hello_di/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/hello/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/hello/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc_live/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc_live/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc_live/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc_live/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello_springmvc_live/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/hello/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hello_springmvc_live/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/hello/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_annotation/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_annotation/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_annotation/target/classes/META-INF/maven/spring_di_annotation/spring_di_annotation/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_annotation/target/classes/META-INF/maven/spring_di_annotation/spring_di_annotation/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_javaconfig/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_javaconfig/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_javaconfig/target/classes/META-INF/maven/spring_di_javaconfig/spring_di_javaconfig/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_javaconfig/target/classes/META-INF/maven/spring_di_javaconfig/spring_di_javaconfig/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_xml/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_xml/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_di_xml/target/classes/META-INF/maven/spring_di_xml/spring_di_xml/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_di_xml/target/classes/META-INF/maven/spring_di_xml/spring_di_xml/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/target/classes/com/ssafy/valid/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/target/classes/com/ssafy/valid/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/target/classes/com/ssafy/valid/MemberDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/target/classes/com/ssafy/valid/MemberDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssafy_lombok/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/valid/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ssafy_lombok/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/valid/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_1/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_1/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_1/target/classes/META-INF/maven/ws_framework_1/ws_framework_1/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_1/target/classes/META-INF/maven/ws_framework_1/ws_framework_1/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_3/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_3/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_3/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_3/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_3/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_3/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ws_framework_3/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ws_framework_3/target/m2e-wtp/web-resources/META-INF/maven/com.ssafy/board/pom.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2XG3Cl7YWeRhQ1WNEBiH6lyCiDh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/portfolio/study/Spring/ws_framework_4",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31c66902-baa2-4315-9028-2a5aee5ad25f" name="Changes" comment="" />
+      <created>1698241463186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698241463186</updated>
+      <workItem from="1698241464184" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
