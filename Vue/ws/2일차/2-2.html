@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>다양한 전시 정보</h1>
+      <hr />
+      <ul>
+        <li :id="enTitle">
+          <h3>{{koTitle}}</h3>
+          <p v-html="description"></p>
+          <hr />
+          <p>전시 위치</p>
+          <a :href="museumURL">전시장 바로가기</a>
+          <hr />
+          <p>입장권 구매하기</p>
+          <div>
+            <span>인원 수 : {{people}} 명 </span>
+            <button @click="minus">-</button>
+            <button @click="plus">+</button>
+          </div>
+          <p>총 입장료 : {{people * 1000}}원</p>
+          <hr />
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const koTitle = ref("모네 인사이드");
+          const enTitle = ref("monet-inside");
+          const artMuseum = ref("예술의 전당");
+          const museumURL = ref("'https://www.sac.or.kr/'");
+          const description = ref(
+            "<p> &lt;모네 인사이드&gt; 는 빛의 화가 <b>클로드 모네</b>가 남긴 소중한 명작들을 현대적 감각으로 재해석해 음악과 함께 감상하는 미디어아트 전시입니다. </p>"
+          );
+          const people = ref(0);
+          const costSum = ref(0);
+
+          const minus = () => {
+            if (people.value > 0) {
+              people.value--;
+            }
+          };
+
+          const plus = () => {
+            people.value++;
+          };
+
+          return {
+            koTitle,
+            enTitle,
+            artMuseum,
+            museumURL,
+            description,
+            people,
+            minus,
+            plus,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

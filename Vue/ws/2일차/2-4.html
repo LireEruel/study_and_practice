@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>다양한 전시 정보</h1>
+      <hr />
+      <ul>
+        <li :id="enTitle" :class="{selected : exhibition.isSelected}">
+          <label for="selected">전시 선택</label>
+          <input
+            type="checkbox"
+            name="selected"
+            id="selected"
+            v-model="exhibition.isSelected"
+          />
+          <h3>{{koTitle}}</h3>
+          <p v-html="exhibition.description"></p>
+          <hr />
+          <p>전시 위치</p>
+          <a :href="exhibition.museumURL">전시장 바로가기</a>
+          <hr />
+          <p>입장권 구매하기</p>
+          <div>
+            <span :class="{error : exhibition.people == 0}"
+              >인원 수 : {{exhibition.people}} 명
+            </span>
+            <button
+              :disabled="exhibition.people == 0"
+              @click="() => minus(exhibition)"
+            >
+              -
+            </button>
+            <button
+              :disabled="exhibition.people == 10"
+              @click="() => plus(exhibition)"
+            >
+              +
+            </button>
+          </div>
+
+          <hr />
+        </li>
+        <p>총 입장료 : {{exhibition.people * 1000}}원</p>
+      </ul>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+      createApp({
+        setup() {
+          const exhibition = ref({
+            koTitle: "모네 인사이드",
+            enTitle: "monet-inside",
+            artMuseum: "예술의 전당",
+            museumURL: "https://www.sac.or.kr/",
+            description:
+              "<p> &lt;모네 인사이드&gt; 는 빛의 화가 <b>클로드 모네</b>가 남긴 소중한 명작들을 현대적 감각으로 재해석해 음악과 함께 감상하는 미디어아트 전시입니다. </p>",
+            isSelected: false,
+            price: 1000,
+            totalNum: 0,
+            people: 0,
+          });
+          const minus = (exhibition) => {
+            if (exhibition.people > 0) {
+              exhibition.people--;
+            }
+          };
+
+          const plus = (exhibition) => {
+            exhibition.people++;
+          };
+
+          return {
+            exhibition,
+            minus,
+            plus,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
+
+<style>
+  .selected {
+    background-color: gainsboro;
+  }
+  .error {
+    color: red;
+  }
+</style>
