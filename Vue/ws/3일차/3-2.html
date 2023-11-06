@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+      <h1>다양한 전시 정보</h1>
+      <ul>
+        <li
+          v-for="item in dataList.filter((data) => data.isActive)"
+          :key="item.title"
+        >
+          <h3>{{item.title}}</h3>
+          <p>{{item.place}}</p>
+          <p>가격 : {{item.cost}}</p>
+          <hr />
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const dataList = [
+            {
+              title: "무라카미 다카시 : 무라카시좀비",
+              place: "부산 시립 미술관",
+              cost: 1000,
+              isActive: true,
+            },
+            {
+              title: "마우라치오 카텔란 개인전",
+              place: "리움 미술관",
+              cost: 30000,
+              isActive: true,
+            },
+            {
+              title: "조선백자전",
+              place: "리움 미술관",
+              cost: 30000,
+              isActive: true,
+            },
+            {
+              title: "한국 실험미술 1960 - 1970",
+              place: "서울 시립 미술관",
+              cost: 1000,
+              isActive: false,
+            },
+            {
+              title: "알렉산더 칼더 x 이우환",
+              place: "국제갤러리 서울점",
+              cost: 15000,
+              isActive: false,
+            },
+          ];
+          return { dataList };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
